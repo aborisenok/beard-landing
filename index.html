@@ -9,6 +9,9 @@
 
 	<header class="main-header">
 		<nav class="main-navigation">
+			<a class="main-header-logo">
+				<img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершоп Бородинский">
+			</a>
 			<ul class="site-navigation">
 				<li><a href="info.html">Информация</a></li>
 				<li><a href="news.html">Новости</a></li>
@@ -61,13 +64,13 @@
 		<section class="gallery">
 			<h2>Фотогалерея</h2>
 			<figure class="gallery-content">
-				<img src="img/photo-1.jpg" alt="Photo">
+				<a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
 			</figure>
-			<button class="btn gallery-prev">Назад</button>
-			<button class="btn gallery-next">Вперед</button>
+			<button class="button gallery-button gallery-button-back">Назад</button>
+			<button class="button gallery-button gallery-button-back">Вперед</button>
 		</section>
 
-		<section class="main-contacts">
+		<section class="contacts">
 			<h2>Контактная информация</h2>
 			<p>
 			   Барбершор "Бородинский"<br>
@@ -79,31 +82,62 @@
 				пн-пт: с 10:00 до 22:00<br>
 				сб-вс: с 10:00 до 19:00
 			</p> 
-			<a href="#">Как проехать</a>
-			<a href="#">Обратная связь</a>
+			<a class="button" href="map.html">Как проехать</a>
+			<a class="button" href="contacts.html">Обратная связь</a>
 		</section>
 
-		<section class="order">
+		<section class="appointment">
 			<h2>Записаться</h2>
-			<p>
+			<p class="appointment-info">
 				Укажите желаемую дату и время и мы свяжемся<br>
 				с вами для подтверждения брони
 			</p>
-			<label>Дата</label>
-			<input type="" name="">
-			<label>Время</label>
-			<input type="" name="">
-			<label>Ваше имя</label>
-			<input type="" name="">
-			<label>Телефон</label>
-			<input type="" name="">
-			<button>Отправить</button>
+			<form>
+				<label>Дата</label>
+				<input type="" name="">
+				<label>Время</label>
+				<input type="" name="">
+				<label>Ваше имя</label>
+				<input type="" name="">
+				<label>Телефон</label>
+				<input type="" name="">
+				<button>Отправить</button>
+			</form>
 		</section>
 	</main>
 
-	<footer>
-		
+	<footer class="main-footer">
+		<p class="footer-contacts">
+			Барбершоп "Бородинский"</br>
+			Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8<br>
+			<a href="map.html">Как нас найти</a><br>
+			Телефон: +7 (812) 66-02-66
+		</p>
+		<div class="footer-social">
+			<b>Давайте дружить</b>
+			<ul>
+				<li><a class="social-button" href="#">Вконтакте</a></li>
+				<li><a class="social-button" href="#">Фэйсбук</a></li>
+				<li><a class="social-button" href="#">Инстаграм</a></li>
+			</ul>
+		</div>
+		<p class="footer-copyright">
+			<b>Разработанно:</b>
+			<a href="https://htmlacademy.ru">HTML Academy</a>
+		</p>
 	</footer>
+
+	<section class="modal modal-login">
+		<h2>Личный кабинет</h2>
+		<p>Введите свой логин и пароль</p>
+		<!-- Здесь будет форма -->
+		<span class="modal-close">x</span>
+	</section>
+
+	<section class="modal modal-map">
+		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<span class="modal-close">x</span>
+	</section>
 
 </body>
 </html>
