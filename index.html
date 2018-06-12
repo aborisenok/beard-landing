@@ -3,14 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Барбершоп "Бородинский"</title>
+	<link rel="stylesheet" href="http://necolas.github.io/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
 </head>
 <body>
 
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo">
-				<img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершоп Бородинский">
+				<img src="img/index-logo.svg" alt="Логотип барбершоп Бородинский">
 			</a>
 			<ul class="site-navigation">
 				<li><a href="info.html">Информация</a></li>
@@ -31,21 +33,21 @@
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества</h2>
 			<ul class="features-list">
-				<li class="features-item">
+				<li class="feature-item">
 					<h3>Быстро</h3>
 					<p>Мы делаем свою работу быстро! Два часа пролетят незаметно и вы - счастливый обладатель стильной стрижки-минутки!</p>
 				</li>
-				<li class="features-item">
+				<li class="feature-item">
 					<h3>Круто</h3>
 					<p>Забудте как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.</p>
 				</li>
-				<li class="features-item">
+				<li class="feature-item">
 					<h3>Дорого</h3>
 					<p>Наши мастера - профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определенный статус?</p>
 				</li>
 			</ul>
 		</section>
-
+	<div class="index-columns">	
 		<section class="news">
 			<h2>Новости</h2>
 			<ul class="news-list">
@@ -64,12 +66,13 @@
 		<section class="gallery">
 			<h2>Фотогалерея</h2>
 			<figure class="gallery-content">
-				<a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+				<a href="#"><img src="img/studio-photo.jpg" alt="Интерьер"></a>
 			</figure>
 			<button class="button gallery-button gallery-button-back">Назад</button>
 			<button class="button gallery-button gallery-button-back">Вперед</button>
 		</section>
-
+	</div>	
+	<div class="index-columns">
 		<section class="contacts">
 			<h2>Контактная информация</h2>
 			<p>
@@ -92,18 +95,27 @@
 				Укажите желаемую дату и время и мы свяжемся<br>
 				с вами для подтверждения брони
 			</p>
-			<form>
-				<label>Дата</label>
-				<input type="" name="">
-				<label>Время</label>
-				<input type="" name="">
-				<label>Ваше имя</label>
-				<input type="" name="">
-				<label>Телефон</label>
-				<input type="" name="">
-				<button>Отправить</button>
-			</form>
+			<form action="https://echo.htmlacademy.ru" class="appointment-form" method="post">
+				<p class="appointment-item">
+					<label for="appointment-date"></label>
+					<input id="appointment-date" type="text" name="date" value="" placeholder="12.01.2017">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-time"></label>
+					<input id="appointment-time" type="text" name="time" value="" placeholder="10:30">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-name"></label>
+					<input id="appointment-name" type="text" name="name" value="" placeholder="Ваше имя">
+				</p>
+				<p class="appointment-item">
+					<label for="appointment-phone"></label>
+					<input id="appointment-phone" type="tel" name="phone" value="" placeholder="+ 375 (XX) XXX-XX-XX">
+				</p>
+            	<button type="submit" class="button">Отправить</button>
+          	</form>
 		</section>
+	</div>	
 	</main>
 
 	<footer class="main-footer">
@@ -116,22 +128,31 @@
 		<div class="footer-social">
 			<b>Давайте дружить</b>
 			<ul>
-				<li><a class="social-button" href="#">Вконтакте</a></li>
-				<li><a class="social-button" href="#">Фэйсбук</a></li>
-				<li><a class="social-button" href="#">Инстаграм</a></li>
+				<li><a class="social-button" href="#"><img src="img/vk-icon.svg"></a></li>
+				<li><a class="social-button" href="#"><img src="img/facebook-icon.svg"></a></li>
+				<li><a class="social-button" href="#"><img src="img/instagram-icon.svg"></a></li>
 			</ul>
 		</div>
 		<p class="footer-copyright">
 			<b>Разработанно:</b>
-			<a href="https://htmlacademy.ru">HTML Academy</a>
+			<a class="button" href="https://htmlacademy.ru">HTML Academy</a>
 		</p>
 	</footer>
 
 	<section class="modal modal-login">
-		<h2>Личный кабинет</h2>
-		<p>Введите свой логин и пароль</p>
-		<!-- Здесь будет форма -->
-		<span class="modal-close">x</span>
+		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+        <h2 class="modal-content-title">Личный кабинет</h2>
+        <p>Введите свой логин и пароль</p>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        	<input class="icon-user" type="text" name="login" placeholder="Логин">
+        	<input class="icon-password" type="password" name="password" placeholder="Пароль">
+        	<label class="login-checkbox">
+          		<input type="checkbox" name="remember">
+          		<span class="checkbox-indicator"></span> Запомнить меня
+        	</label>
+        	<a class="restore" href="#">Я забыл пароль!</a>
+        	<button class="button" type="submit">Войти</button>
+      	</form>
 	</section>
 
 	<section class="modal modal-map">
