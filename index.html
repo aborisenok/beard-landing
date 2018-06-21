@@ -148,24 +148,34 @@
 	</footer>
 
 	<section class="modal modal-login">
-		<button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
+		
         <h2 class="modal-content-title">Личный кабинет</h2>
-        <p>Введите свой логин и пароль</p>
+        <p class="modal-description">Введите свой логин и пароль</p>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-        	<input class="icon-user" type="text" name="login" placeholder="Логин">
-        	<input class="icon-password" type="password" name="password" placeholder="Пароль">
-        	<label class="login-checkbox">
-          		<input type="checkbox" name="remember">
-          		<span class="checkbox-indicator"></span> Запомнить меня
-        	</label>
-        	<a class="restore" href="#">Я забыл пароль!</a>
+        	<p>
+        		<label class="visually-hidden" for="user-login">Логин</label>
+        		<input class="login-icon-user" type="text" name="login" id="user-login" placeholder="Логин">
+        	</p>
+        	<p>
+        		<label class="visually-hidden" for="user-password">Пароль</label>
+        		<input class="login-icon-password" type="password" name="password" id="user-password" placeholder="Пароль">
+        	</p>
+        	<p class="login-help">
+        		<label class="login-checkbox">
+          			<input type="checkbox" name="remember" class="visually-hidden">
+          			<span class="checkbox-indicator"></span> Запомнить меня
+        		</label>
+        		<a class="restore" href="#">Я забыл пароль!</a>
+        	</p>
         	<button class="button" type="submit">Войти</button>
       	</form>
+      	<button class="modal-close" type="button" title="Закрыть">Закрыть</button>
 	</section>
 
 	<section class="modal modal-map">
 		<h2 class="visually-hidden">Как до нас добраться</h2>
-		<span class="modal-close">x</span>
+		<p><img src="../img/index/map.jpg" width="780" height="560" alt="Офис компании"></p>
+		<button class="modal-close" type="button">Закрыть</span>
 	</section>
 
 </body>
