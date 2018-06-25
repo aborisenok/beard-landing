@@ -689,7 +689,7 @@ img{
 }
 
 .login-icon-user{
-	background-image: url("../img/indexuser.png");
+	background-image: url("../img/index/user.png");
 	background-position: 270px center;
 	background-repeat: no-repeat;
 }
